@@ -1,0 +1,84 @@
+<!--The HTML code is property to Mr. You (Kristiyan Valchev) and can only be viewed-->
+<!--If you want to use part of the code, please first contact me: mr.youdevelopment@gmail.com-->
+
+<html id="html" class="htmlAboutUs">
+    <head id="head">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="Files/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="icon" href="Images/iconCercle.png" type="image" sizes="16x16">
+
+        <meta charset="utf-8">
+        <meta name="description" content="Find the best images for your website and/or project here">
+        <meta name="keywords" content="image, Image, shop, Shop, Quick, quick, Qumage, qumage">
+        <meta name="author" content="Kristiyan Valchev">
+        <meta name="viewport" content="width = device-width, user-scalable = no, initial-scale = 1">
+        
+        <script type="text/javascript" src="Files/Functions.js"></script>
+
+        <title id="title">Qumage | About us</title>
+    </head>
+
+    <body id="body" onload="loadPage();">
+        <!-- #region Default -->
+        <script>
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+		</script>
+        <!-- #endregion Default -->
+
+        <div class="topBar">
+            <div onclick="location.href = 'index.html';" class="topBarLogo"><img src="Images/Icon.png" alt="Logo"></div>
+            
+            <p onclick="location.href = 'index.html';" class="topBarText">Home</p>
+            <p onclick="location.href = 'aboutUs.html';" class="topBarText Active">About us</p>
+            <p onclick="location.href = 'Explore.html';" class="topBarText">Explore</p>
+            <p onclick="location.href = 'Contacts.html';" class="topBarText">Contacts</p>
+
+            <div onclick="setActive('sidePanelMenu');" class="topBarBurgerButton"><div></div></div>
+        </div>
+
+        <div class="sidePanel" id="sidePanelMenu">
+            <div onclick="setActive('sidePanelMenu');" class="XCloseButton"></div>
+
+            <h1 class="sidePanelTitle">Menu</h1>
+
+            <p onclick="location.href = 'index.html';" class="sidePanelText">Home</p>
+            <p onclick="location.href = 'aboutUs.html';" class="sidePanelText Active">About us</p>
+            <p onclick="location.href = 'Explore.html';" class="sidePanelText">Explore</p>
+            <p onclick="location.href = 'Contacts.html';" class="sidePanelText">Contacts</p>
+        </div>
+
+        <div class="Main" id="mainAboutUs">
+            <div class="mainBackgroundImage"><img src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Flower background"></div>
+            <div class="mainBox">
+                <p class="mainText">
+                    Our mission is to give everyone a voice and show them the world.
+                    <br><br>
+                    We believe that everyone deserves to have a scene, and that the world is a better place when we listen,
+                    share and build community through our images.
+                </p>
+            </div>
+        </div>
+
+        <div class="bottomBar">
+            <div class="bottomBarLinks">
+                <p onclick="location.href = 'index.html';" class="bottomBarLink">Home</p>
+                <p onclick="location.href = 'aboutUs.html';" class="bottomBarLink Active">About us</p>
+                <p onclick="location.href = 'Explore.html';" class="bottomBarLink">Explore</p>
+                <p onclick="location.href = 'Contacts.html';" class="bottomBarLink">Contacts</p>
+            </div>
+
+            <div class="bottomBarLogo">
+                <img src="Images/LogoNoBG.svg" alt="Logo">
+            </div>
+        </div>
+
+        <script>
+            
+        </script>
+    </body>
+</html>

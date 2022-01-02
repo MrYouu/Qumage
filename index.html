@@ -1,0 +1,175 @@
+<!--The HTML code is property to Mr. You (Kristiyan Valchev) and can only be viewed-->
+<!--If you want to use part of the code, please first contact me: mr.youdevelopment@gmail.com-->
+
+<html id="html" class="htmlIndex">
+    <head id="head">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="Files/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="icon" href="Images/iconCercle.png" type="image" sizes="16x16">
+
+        <meta charset="utf-8">
+        <meta name="description" content="Find the best images for your website and/or project here">
+        <meta name="keywords" content="image, Image, shop, Shop, Quick, quick, Qumage, qumage">
+        <meta name="author" content="Kristiyan Valchev">
+        <meta name="viewport" content="width = device-width, user-scalable = no, initial-scale = 1">
+        
+        <script type="text/javascript" src="Files/Functions.js"></script>
+
+        <title id="title">Qumage | Home</title>
+    </head>
+
+    <body id="body" onload="loadPage();">
+        <!-- #region Default -->
+        <script>
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+		</script>
+        <!-- #endregion Default -->
+
+        <div class="topBar">
+            <div onclick="location.href = 'index.html';" class="topBarLogo"><img src="Images/Icon.png" alt="Logo"></div>
+            
+            <p onclick="location.href = 'index.html';" class="topBarText Active">Home</p>
+            <p onclick="location.href = 'aboutUs.html';" class="topBarText">About us</p>
+            <p onclick="location.href = 'Explore.html';" class="topBarText">Explore</p>
+            <p onclick="location.href = 'Contacts.html';" class="topBarText">Contacts</p>
+
+            <div onclick="setActive('sidePanelMenu');" class="topBarBurgerButton"><div></div></div>
+        </div>
+
+        <div class="sidePanel" id="sidePanelMenu">
+            <div onclick="setActive('sidePanelMenu');" class="XCloseButton"></div>
+
+            <h1 class="sidePanelTitle">Menu</h1>
+
+            <p onclick="location.href = 'index.html';" class="sidePanelText Active">Home</p>
+            <p onclick="location.href = 'aboutUs.html';" class="sidePanelText">About us</p>
+            <p onclick="location.href = 'Explore.html';" class="sidePanelText">Explore</p>
+            <p onclick="location.href = 'Contacts.html';" class="sidePanelText">Contacts</p>
+        </div>
+
+        <div class="Main">
+            <div class="mainBackgroundImage"><img src="Images/mainPageBackground.png" alt="Flower background"></div>
+            <div class="mainBox">
+                <div class="mainLogo"><img src="Images/LogoNoBG.svg" alt="Full text logo"></div>
+                <p class="mainText">
+                    Small project with wide-ranged images.<br>
+                    Powered by creators on <a href="https://pexels.com" target="_blank">Pexels</a>.
+                </p>
+                <div class="inputField inputFieldNoSideSpace inputFieldWithoutInfoText">
+                    <input type="text" placeholder="Search for image" id="mainBoxInputFieldSearch">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="sideSlider" id="sideSliderMainCategory">
+            <div class="sideSliderSideFading Left" style="display: none;"></div>
+            <div class="sideSliderSideFading Right"></div>
+            <div onclick="this.parentElement.getElementsByClassName('sideSliderContent')[0].scrollBy({ left: event.deltaY < 0 ? -sideSliderButtonScrollAmount : -sideSliderButtonScrollAmount });" class="sideSliderScrollButton Left" style="display: none;"><i class="fas fa-chevron-left"></i></div>
+            <div onclick="this.parentElement.getElementsByClassName('sideSliderContent')[0].scrollBy({ left: event.deltaY < 0 ? -sideSliderButtonScrollAmount : sideSliderButtonScrollAmount });" class="sideSliderScrollButton Right"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="sideSliderContent">
+                <p onclick="setActive(this, undefined, true); loadPage();" class="sideSliderTextElement Active">All</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Holidays');" class="sideSliderTextElement">Holidays</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Blockchain');" class="sideSliderTextElement">Blockchain</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Wallpapers');" class="sideSliderTextElement">Wallpapers</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Renders');" class="sideSliderTextElement">3D Renders</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Textures & Patterns');" class="sideSliderTextElement">Textures & Patterns</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Architecture');" class="sideSliderTextElement">Architecture</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Experimental');" class="sideSliderTextElement">Experimental</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Nature');" class="sideSliderTextElement">Nature</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Business & Work');" class="sideSliderTextElement">Business & Work</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Fashion');" class="sideSliderTextElement">Fashion</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Film');" class="sideSliderTextElement">Film</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Food & Drink');" class="sideSliderTextElement">Food & Drink</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Health & Wellness');" class="sideSliderTextElement">Health & Wellness</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Current Events');" class="sideSliderTextElement">Current Events</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('People');" class="sideSliderTextElement">People</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Interiors');" class="sideSliderTextElement">Interiors</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Street Photography');" class="sideSliderTextElement">Street Photography</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Travel');" class="sideSliderTextElement">Travel</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Animals');" class="sideSliderTextElement">Animals</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Spirituality');" class="sideSliderTextElement">Spirituality</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Arts & Culture');" class="sideSliderTextElement">Arts & Culture</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('History');" class="sideSliderTextElement">History</p>
+                <p onclick="setActive(this, undefined, true); loadCategory('Athletics');" class="sideSliderTextElement">Athletics</p>
+            </div>
+        </div>
+
+        <div class="imageGallery">
+            <div class="imageGalleryCollumn" id="imageGalleryCollumnMain1"></div>
+            <div class="imageGalleryCollumn" id="imageGalleryCollumnMain2"></div>
+            <div class="imageGalleryCollumn" id="imageGalleryCollumnMain3"></div>
+        </div>
+
+        <div class="bottomBar">
+            <div class="bottomBarLinks">
+                <p onclick="location.href = 'index.html';" class="bottomBarLink Active">Home</p>
+                <p onclick="location.href = 'aboutUs.html';" class="bottomBarLink">About us</p>
+                <p onclick="location.href = 'Explore.html';" class="bottomBarLink">Explore</p>
+                <p onclick="location.href = 'Contacts.html';" class="bottomBarLink">Contacts</p>
+            </div>
+
+            <div class="bottomBarLogo">
+                <img src="Images/LogoNoBG.svg" alt="Logo">
+            </div>
+        </div>
+
+        <div class="popUpWindow" onclick="closePopUpWindow('popUpWindowImagePriview');" id="popUpWindowImagePriview">
+            <div onclick="closePopUpWindow('popUpWindowImagePriview');" class="XCloseButton"></div>
+
+            <div id="popUpWindowImagePriviewZoom">
+                <img src="" onclick="event.stopPropagation();" alt="Image" id="popUpWindowImagePriviewImg">
+            </div>
+        </div>
+
+        <script>
+            //<!--* Handles enter clicked -->
+            document.getElementById("mainBoxInputFieldSearch").addEventListener("keypress", e => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+
+                    localStorage.setItem("searchValue", document.getElementById("mainBoxInputFieldSearch").value);
+                    location.href = "Explore.html";
+                }
+            });
+
+            //<!--* Side slider main categories -->
+            var sideSliderMainCategory = document.getElementById("sideSliderMainCategory");
+            var sideSliderContentMainCategory = sideSliderMainCategory.getElementsByClassName("sideSliderContent")[0];
+
+            var scrollAmountOffcet = 70;
+            sideSliderContentMainCategory.addEventListener("scroll", event => {
+                var scrollAmount = event.target.scrollLeft;
+
+                if (scrollAmount >= scrollAmountOffcet) {
+                    sideSliderMainCategory.getElementsByClassName("sideSliderSideFading Left")[0].style.display = "";
+                    sideSliderMainCategory.getElementsByClassName("sideSliderScrollButton Left")[0].style.display = "";
+                }
+                else {
+                    sideSliderMainCategory.getElementsByClassName("sideSliderSideFading Left")[0].style.display = "none";
+                    sideSliderMainCategory.getElementsByClassName("sideSliderScrollButton Left")[0].style.display = "none";
+                }
+
+                if (event.target.offsetWidth + event.target.scrollLeft >= event.target.scrollWidth - scrollAmountOffcet) {
+                    sideSliderMainCategory.getElementsByClassName("sideSliderSideFading Right")[0].style.display = "none";
+                    sideSliderMainCategory.getElementsByClassName("sideSliderScrollButton Right")[0].style.display = "none";
+                }
+                else {
+                    sideSliderMainCategory.getElementsByClassName("sideSliderSideFading Right")[0].style.display = "";
+                    sideSliderMainCategory.getElementsByClassName("sideSliderScrollButton Right")[0].style.display = "";
+                }
+            });
+
+            sideSliderContentMainCategory.addEventListener("wheel", event => {
+                event.preventDefault();
+                sideSliderContentMainCategory.scrollLeft += event.deltaY;
+            });
+        </script>
+    </body>
+</html>

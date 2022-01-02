@@ -1,0 +1,101 @@
+<!--The HTML code is property to Mr. You (Kristiyan Valchev) and can only be viewed-->
+<!--If you want to use part of the code, please first contact me: mr.youdevelopment@gmail.com-->
+
+<html id="html" class="htmlExplore">
+    <head id="head">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="Files/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="icon" href="Images/iconCercle.png" type="image" sizes="16x16">
+
+        <meta charset="utf-8">
+        <meta name="description" content="Find the best images for your website and/or project here">
+        <meta name="keywords" content="image, Image, shop, Shop, Quick, quick, Qumage, qumage">
+        <meta name="author" content="Kristiyan Valchev">
+        <meta name="viewport" content="width = device-width, user-scalable = no, initial-scale = 1">
+        
+        <script type="text/javascript" src="Files/Functions.js"></script>
+
+        <title id="title">Qumage | Explore</title>
+    </head>
+
+    <body id="body" onload="loadPage();">
+        <!-- #region Default -->
+        <script>
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+		</script>
+        <!-- #endregion Default -->
+
+        <div class="topBar">
+            <div onclick="location.href = 'index.html';" class="topBarLogo"><img src="Images/Icon.png" alt="Logo"></div>
+            
+            <p onclick="location.href = 'index.html';" class="topBarText">Home</p>
+            <p onclick="location.href = 'aboutUs.html';" class="topBarText">About us</p>
+            <p onclick="location.href = 'Explore.html';" class="topBarText Active">Explore</p>
+            <p onclick="location.href = 'Contacts.html';" class="topBarText">Contacts</p>
+
+            <div onclick="setActive('sidePanelMenu');" class="topBarBurgerButton"><div></div></div>
+        </div>
+
+        <div class="sidePanel" id="sidePanelMenu">
+            <div onclick="setActive('sidePanelMenu');" class="XCloseButton"></div>
+
+            <h1 class="sidePanelTitle">Menu</h1>
+
+            <p onclick="location.href = 'index.html';" class="sidePanelText">Home</p>
+            <p onclick="location.href = 'aboutUs.html';" class="sidePanelText">About us</p>
+            <p onclick="location.href = 'Explore.html';" class="sidePanelText Active">Explore</p>
+            <p onclick="location.href = 'Contacts.html';" class="sidePanelText">Contacts</p>
+        </div>
+
+        <div class="Main">
+            <div class="mainBox">
+                <div class="inputField inputFieldNoSideSpace inputFieldWithoutInfoText">
+                    <input type="text" placeholder="Search for image" id="mainBoxInputFieldSearch">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="imageGallery">
+            <div class="imageGalleryCollumn" id="imageGalleryCollumnMain1"></div>
+            <div class="imageGalleryCollumn" id="imageGalleryCollumnMain2"></div>
+            <div class="imageGalleryCollumn" id="imageGalleryCollumnMain3"></div>
+        </div>
+
+        <div class="bottomBar">
+            <div class="bottomBarLinks">
+                <p onclick="location.href = 'index.html';" class="bottomBarLink">Home</p>
+                <p onclick="location.href = 'aboutUs.html';" class="bottomBarLink">About us</p>
+                <p onclick="location.href = 'Explore.html';" class="bottomBarLink Active">Explore</p>
+                <p onclick="location.href = 'Contacts.html';" class="bottomBarLink">Contacts</p>
+            </div>
+
+            <div class="bottomBarLogo">
+                <img src="Images/LogoNoBG.svg" alt="Logo">
+            </div>
+        </div>
+
+        <div class="popUpWindow" onclick="closePopUpWindow('popUpWindowImagePriview');" id="popUpWindowImagePriview">
+            <div onclick="closePopUpWindow('popUpWindowImagePriview');" class="XCloseButton"></div>
+
+            <div id="popUpWindowImagePriviewZoom">
+                <img src="" onclick="event.stopPropagation();" alt="Image" id="popUpWindowImagePriviewImg">
+            </div>
+        </div>
+
+        <script>
+            //<!--* Handles enter clicked -->
+            document.getElementById("mainBoxInputFieldSearch").addEventListener("keypress", e => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    searchImageByUsertInput("mainBoxInputFieldSearch");
+                }
+            });
+        </script>
+    </body>
+</html>
